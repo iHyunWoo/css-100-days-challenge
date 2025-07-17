@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./index.css"/>
+    <title>Day001</title>
+</head>
+<body>
+<div class="frame">
+    <div class="center">
+        <div class="icon-wrapper">
+            <div id="icon1" class="icon disable-animation"></div>
+            <div id="icon2" class="icon disable-animation"></div>
+            <div id="icon3" class="icon disable-animation"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    const iconWrapper = document.querySelector('.icon-wrapper');
+    const icons = document.querySelectorAll('.icon');
+    iconWrapper.addEventListener('click', () => {
+      icons.forEach((icon) => {icon.classList.remove("disable-animation")})
+      iconWrapper.classList.toggle('active');
+    })
+</script>
+</html>
